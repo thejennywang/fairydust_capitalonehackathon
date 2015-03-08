@@ -79,7 +79,7 @@ module.exports = function (app) {
 
         //res.json(goals);
 
-        capitalone.getTransactionsNew2(goals, function(data){ res.json(data) })
+        capitalone.getTransactionsNew(goals, function(data){ res.json(data) })
 
     });
 
