@@ -6,7 +6,7 @@ var morgan = require('morgan');
 
 var app = express();
 app.use(morgan('dev'));
-app.set('port', 5000);
+app.set('port', process.env.PORT || 5000);
 
 // configure express template engine ===========================================
 app.use(express.static(__dirname + '/static'));
