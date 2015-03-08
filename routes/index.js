@@ -2,7 +2,9 @@
 var restler = require('restler');
 // var request = require('request');
 var crypto = require('crypto');
+var async = require('async');
 var capitalone = require('../services/capitalone-levelmoney/lib/levelmoney');
+var plotly = require('../services/plotly/lib/plotly');
 
 module.exports = function (app) {
 
@@ -119,6 +121,37 @@ module.exports = function (app) {
         capitalone.getTransactionsAll(function(data){ res.json(data) }) ;
     });
 
+    app.get('/plot', function(req, res) {
+
+      getPlotData( function(data){
+
+        plotly.plotData( data, function(plot){ res.render('plot'); });
+
+      });
+
+    });
+
+
+};
+
+
+function getPlotData(callback){
+
+  var data = {"x":[], "y":[]};
+
+  capitalone.getTransactionsAll(function(trans){
+
+    async.reduce(trans.transactions, data, function(data, tran, callback){
+        process.nextTick(function(){
+          data.x.push(tran['transaction-time']);
+          data.y.push(tran['amount']);
+            callback(null, data );
+        });
+    }, function(err, result){
+        callback(data);
+    });
+
+  });
 
 };
 
@@ -154,7 +187,7 @@ function getDateMMDDYYYY() {
 }
 
 
-function generateToken(crypto) {
+function generateToken() {
     var tokenLength = 10;
     var buf = crypto.randomBytes(Math.ceil(tokenLength * 3 / 4));
     var token = buf.toString('base64').slice(0, tokenLength).replace(/\+/g, '0').replace(/\//g, '0');
