@@ -58,7 +58,7 @@ module.exports = {
 
         newTransaction['transaction-id'] = transaction['transaction-id'];
         newTransaction['account-id'] = transaction['account-id'];
-        newTransaction['raw-merchant'] = transaction['raw-merchant']; 
+        newTransaction['raw-merchant'] = transaction['raw-merchant'];
         newTransaction['categorization'] = transaction['categorization'];
 
         newTransaction['saved'] =  Math.round(Math.abs(transaction['amount']) * 0.05);
@@ -105,7 +105,7 @@ module.exports = {
 
         newTransaction['transaction-id'] = transaction['transaction-id'];
         newTransaction['account-id'] = transaction['account-id'];
-        newTransaction['raw-merchant'] = transaction['raw-merchant']; 
+        newTransaction['raw-merchant'] = transaction['raw-merchant'];
         newTransaction['categorization'] = transaction['categorization'];
 
         newTransaction['saved'] =  Math.round(Math.abs(transaction['amount']) * 0.05);
@@ -117,7 +117,8 @@ module.exports = {
             callback(null, resultData );
         });
     }, function(err, result){
-        goals[0].transactions = resultData;
+        goals[0].transactions = resultData.transactions;
+        goals[0].saved = resultData.totalsaved.toString();
         callback(goals);
     });
 
