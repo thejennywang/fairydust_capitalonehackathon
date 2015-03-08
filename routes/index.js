@@ -27,49 +27,139 @@ module.exports = function (app) {
         var goal3 = {};
 
 
-
         var transactions1 =  [
-        {
-          "transaction-id": "1425679320000",
-          "account-id": "nonce:42069000-96459775",
-          "raw-merchant": "SERVICE FEE",
-          "merchant": "Service Fee",
-          "is-pending": false,
-          "transaction-time": "02.25.15",
-          "amount": 48000,
-          "categorization": "Unknown"
-        },
-        {
-          "transaction-id": "1425452880000",
-          "account-id": "nonce:42069000-96459775",
-          "raw-merchant": "CHECK",
-          "merchant": "Check",
-          "is-pending": false,
-          "transaction-time": "02.25.15",
-          "amount": 13642900,
-          "categorization": "Unknown"
-        },
-        {
-          "transaction-id": "1425442800000",
-          "account-id": "nonce:42069000-96459775",
-          "raw-merchant": "CC PAYMENT",
-          "merchant": "CC Payment",
-          "is-pending": false,
-          "transaction-time": "02.25.15",
-          "amount": 5194500,
-          "categorization": "Unknown"
-        },
+            {
+              "transaction-id": "1425679320000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "SERVICE FEE",
+              "merchant": "Service Fee",
+              "is-pending": false,
+              "transaction-time": "02.25.15",
+              "amount": 48000,
+              "categorization": "Unknown"
+            },
+            {
+              "transaction-id": "1425452880000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "CHECK",
+              "merchant": "Check",
+              "is-pending": false,
+              "transaction-time": "02.25.15",
+              "amount": 13642900,
+              "categorization": "Unknown"
+            },
+            {
+              "transaction-id": "1425442800000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "CC PAYMENT",
+              "merchant": "CC Payment",
+              "is-pending": false,
+              "transaction-time": "02.25.15",
+              "amount": 5194500,
+              "categorization": "Unknown"
+            }
         ];
 
+        var transactions2 =  [
+            {
+              "transaction-id": "1425274080000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "ATM WITHDRAWAL",
+              "merchant": "ATM Withdrawal",
+              "is-pending": false,
+              "transaction-time": "2015-02-28T11:29:00.000Z",
+              "amount": -820000,
+              "categorization": "Unknown"
+            },
+            {
+              "transaction-id": "1425254340000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "FUEL CITY",
+              "merchant": "Fuel City",
+              "is-pending": false,
+              "transaction-time": "2015-03-01T17:19:00.000Z",
+              "amount": -737757,
+              "categorization": "Gas & Fuel"
+            },
+            {
+              "transaction-id": "1425218520000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "CHECK 1111",
+              "merchant": "Check 1111",
+              "is-pending": false,
+              "transaction-time": "2015-03-01T14:02:00.000Z",
+              "amount": -23379709,
+              "categorization": "Check"
+            }
+        ];
+
+        var transactions3 =  [
+            {
+              "transaction-id": "1425274080000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "ATM WITHDRAWAL",
+              "merchant": "ATM Withdrawal",
+              "is-pending": false,
+              "transaction-time": "2015-02-28T11:29:00.000Z",
+              "amount": -820000,
+              "categorization": "Unknown"
+            },
+            {
+              "transaction-id": "1425254340000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "FUEL CITY",
+              "merchant": "Fuel City",
+              "is-pending": false,
+              "transaction-time": "2015-03-01T17:19:00.000Z",
+              "amount": -737757,
+              "categorization": "Gas & Fuel"
+            },
+            {
+              "transaction-id": "1425218520000",
+              "account-id": "nonce:42069000-96459775",
+              "raw-merchant": "CHECK 1111",
+              "merchant": "Check 1111",
+              "is-pending": false,
+              "transaction-time": "2015-03-01T14:02:00.000Z",
+              "amount": -23379709,
+              "categorization": "Check"
+            }
+        ];
+
+        //GOAL 1
+
         goal1.id = "1";
-        goal1.name = "college";
+        goal1.name = "College";
         goal1.date = "03.07.2015"
         goal1.targetAmount = "$5000";
         goal1.transactions = transactions1;
         goal1.spent = "$2000";
-        goal1.saved = "$500"
+        goal1.saved = "$500";
 
-       goals[0] = goal1;
+
+        //GOAL 2
+
+        goal2.id = "2";
+        goal2.name = "Travel";
+        goal2.date = "03.07.2015"
+        goal2.targetAmount = "$500";
+        goal2.transactions = transactions2;
+        goal2.spent = "$0";
+        goal2.saved = "$0";
+
+        //GOAL 3
+
+        goal3.id = "3";
+        goal3.name = "Car";
+        goal3.date = "03.07.2015"
+        goal3.targetAmount = "$200";
+        goal3.transactions = transactions3;
+        goal3.spent = "$0";
+        goal3.saved = "$0";
+
+        goals[0] = goal1;
+        goals[1] = goal2;
+        goals[2] = goal3;
 
         res.json(goals);
 
