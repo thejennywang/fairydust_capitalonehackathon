@@ -20,7 +20,7 @@ module.exports = function (app) {
           res.json({ message: 'hooray! welcome to our api!'});
     });
 
-    app.get('/goalsdemo', function(req, res) {
+    app.get('/goals', function(req, res) {
 
         var goals = [];
 
@@ -30,9 +30,7 @@ module.exports = function (app) {
 
 
         var transactions1 =  [];
-
         var transactions2 =  [];
-
         var transactions3 =  [];
 
         //GOAL 1
@@ -73,13 +71,12 @@ module.exports = function (app) {
         goals[1] = goal2;
         goals[2] = goal3;
 
-        res.json(goals);
+        //res.json(goals);
+
+        capitalone.getTransactionsNew2(goals, function(data){ res.json(data) })
 
     });
 
-    app.get('/goals', function(req, res) {
-        capitalone.getTransactionsNew(function(data){ res.json(data) }) ;
-    });
 
     app.get('/c1month', function(req, res) {
         capitalone.getTransactionsMonth(function(data){ res.json(data) }) ;
