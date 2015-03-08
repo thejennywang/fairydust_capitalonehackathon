@@ -76,8 +76,8 @@ module.exports = function (app) {
         goal1.date = "03.07.2015"
         goal1.targetAmount = "50000000";
         goal1.transactions = transactions1;
-        goal1.spent = "20000000";
-        goal1.saved = "5000000";
+        goal1.spent = "40000000";
+        goal1.saved = "30000000";
         goal1.daysNeeded = "1000";
 
 
