@@ -5,6 +5,7 @@ var crypto = require('crypto');
 var async = require('async');
 var capitalone = require('../services/capitalone-levelmoney/lib/levelmoney');
 var plotly = require('../services/plotly/lib/plotly');
+var nexmo = require('../services/nexmo/lib/nexmo');
 
 module.exports = function (app) {
 
@@ -18,6 +19,13 @@ module.exports = function (app) {
 
     app.get('/hi', function(req, res) {
           res.json({ message: 'hooray! welcome to our api!'});
+    });
+
+    app.post('/user', function(req, res){
+      var number = req.body.number;
+      nexmo.sendSms(number, function(result){
+        res.send(201);
+      });
     });
 
     app.get('/goals', function(req, res) {

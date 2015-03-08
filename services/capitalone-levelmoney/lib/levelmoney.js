@@ -1,5 +1,6 @@
 var restler = require('restler');
 
+//demo values
 var c1Uid = "1110568334";
 var c1TOken = "B4E3BC07BE0E891000224A50B5A3DF4E";
 
