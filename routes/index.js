@@ -17,6 +17,38 @@ module.exports = function (app) {
     app.get('/hi', function(req, res) {
           res.json({ message: 'hooray! welcome to our api!'});
     });
+    
+    app.get('/goals', function(req, res) {
+
+        var goals = [];
+
+        var goal1 = {};
+        var goal2 = {};
+        var goal3 = {};
+
+        goal1.id = "1";
+        goal1.name = "college";
+        goal1.amount = "$5000";
+
+
+        goal2.id = "2";
+        goal2.name = "travel";
+        goal2.amount = "$500";
+
+
+        goal3.id = "3";
+        goal3.name = "car";
+        goal3.amount = "$200";
+
+        goals[0] = goal1;
+        goals[1] = goal2;
+        goals[2] = goal3;
+
+
+
+        res.json(goals);
+
+    });
 
 };
 
