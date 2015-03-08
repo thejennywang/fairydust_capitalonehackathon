@@ -61,10 +61,10 @@ module.exports = {
 
         if(transaction['amount'] <= 0) {
           newTransaction['saved'] = Math.round(Math.abs(transaction['amount']) * 0.05);
-          newTransaction['spent'] = 0;
+          newTransaction['spent'] = Math.abs(transaction['amount']);
         } else {
           newTransaction['saved'] = 0;
-          newTransaction['spent'] = transaction['amount'];
+          newTransaction['spent'] = 0;
         } 
 
         resultData.totalsaved += newTransaction['saved'];
