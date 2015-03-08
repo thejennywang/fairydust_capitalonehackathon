@@ -131,10 +131,10 @@ module.exports = function (app) {
         goal1.id = "1";
         goal1.name = "College";
         goal1.date = "03.07.2015"
-        goal1.targetAmount = "$5000";
+        goal1.targetAmount = "50000000";
         goal1.transactions = transactions1;
-        goal1.spent = "$2000";
-        goal1.saved = "$500";
+        goal1.spent = "20000000";
+        goal1.saved = "5000000";
 
 
         //GOAL 2
@@ -142,20 +142,20 @@ module.exports = function (app) {
         goal2.id = "2";
         goal2.name = "Travel";
         goal2.date = "03.07.2015"
-        goal2.targetAmount = "$500";
+        goal2.targetAmount = "5000000";
         goal2.transactions = transactions2;
-        goal2.spent = "$0";
-        goal2.saved = "$0";
+        goal2.spent = "0000";
+        goal2.saved = "0000";
 
         //GOAL 3
 
         goal3.id = "3";
         goal3.name = "Car";
         goal3.date = "03.07.2015"
-        goal3.targetAmount = "$200";
+        goal3.targetAmount = "2000000";
         goal3.transactions = transactions3;
-        goal3.spent = "$0";
-        goal3.saved = "$0";
+        goal3.spent = "0000";
+        goal3.saved = "0000";
 
         goals[0] = goal1;
         goals[1] = goal2;
