@@ -36,42 +36,28 @@ module.exports = function (app) {
         var goal2 = {};
         var goal3 = {};
 
+        getTransactionsAll: function(callback){
+          restler.post('https://api.levelmoney.com/api/v2/hackathon/get-all-transactions', {
+            data   : '{"args": {"uid": 1110568334, "token": "B4E3BC07BE0E891000224A50B5A3DF4E", "api-token": "HackathonApiToken"}, "year": 2015, "month": 3}',
+            headers : { "Accept": "application/json", "Content-Type": "application/json" }
+            }).on('complete', function(response) {
 
-        var transactions1 =  [
-            {
-              "transaction-id": "1425679320000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "SERVICE FEE",
-              "merchant": "Service Fee",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 48000,
-              "saved": 480,
-              "categorization": "Unknown"
+            response.transactions.forEach(function(v, i) {
+              
+                var transaction1 = {'merchant': v['merchant']};
+              
+              });
+
+              callback(response);
+
+              });
             },
-            {
-              "transaction-id": "1425452880000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CHECK",
-              "merchant": "Check",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 13642900,
-              "saved": 136429,
-              "categorization": "Unknown"
-            },
-            {
-              "transaction-id": "1425442800000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CC PAYMENT",
-              "merchant": "CC Payment",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 5194500,
-              "saved": 51945,
-              "categorization": "Unknown"
-            }
-        ];
+
+
+
+        capitalone.getTransactions( function(data) {
+            var transactions1 =  data;
+        });
 
         var transactions2 =  [];
 
@@ -85,7 +71,9 @@ module.exports = function (app) {
         goal1.targetAmount = "50000000";
         goal1.transactions = transactions1;
         goal1.spent = "40000000";
-        goal1.saved = "30000000";
+        capitalone.getTransactions( function(data) {
+            goal1.saved =  data;
+        });
         goal1.daysNeeded = "1000";
 
 
