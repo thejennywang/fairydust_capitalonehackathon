@@ -67,8 +67,8 @@ module.exports = function (app) {
               "raw-merchant": "ATM WITHDRAWAL",
               "merchant": "ATM Withdrawal",
               "is-pending": false,
-              "transaction-time": "2015-02-28T11:29:00.000Z",
-              "amount": -820000,
+              "transaction-time": "02.28.15",
+              "amount": 820000,
               "categorization": "Unknown"
             },
             {
@@ -77,8 +77,8 @@ module.exports = function (app) {
               "raw-merchant": "FUEL CITY",
               "merchant": "Fuel City",
               "is-pending": false,
-              "transaction-time": "2015-03-01T17:19:00.000Z",
-              "amount": -737757,
+              "transaction-time": "03.01.15",
+              "amount": 737757,
               "categorization": "Gas & Fuel"
             },
             {
@@ -87,8 +87,8 @@ module.exports = function (app) {
               "raw-merchant": "CHECK 1111",
               "merchant": "Check 1111",
               "is-pending": false,
-              "transaction-time": "2015-03-01T14:02:00.000Z",
-              "amount": -23379709,
+              "transaction-time": "03.01.15",
+              "amount": 23379709,
               "categorization": "Check"
             }
         ];
@@ -100,8 +100,8 @@ module.exports = function (app) {
               "raw-merchant": "ATM WITHDRAWAL",
               "merchant": "ATM Withdrawal",
               "is-pending": false,
-              "transaction-time": "2015-02-28T11:29:00.000Z",
-              "amount": -820000,
+              "transaction-time": "02.18.15",
+              "amount": 820000,
               "categorization": "Unknown"
             },
             {
@@ -110,8 +110,8 @@ module.exports = function (app) {
               "raw-merchant": "FUEL CITY",
               "merchant": "Fuel City",
               "is-pending": false,
-              "transaction-time": "2015-03-01T17:19:00.000Z",
-              "amount": -737757,
+              "transaction-time": "03.01.15",
+              "amount": 737757,
               "categorization": "Gas & Fuel"
             },
             {
@@ -120,8 +120,8 @@ module.exports = function (app) {
               "raw-merchant": "CHECK 1111",
               "merchant": "Check 1111",
               "is-pending": false,
-              "transaction-time": "2015-03-01T14:02:00.000Z",
-              "amount": -23379709,
+              "transaction-time": "03.01.15",
+              "amount": 23379709,
               "categorization": "Check"
             }
         ];
