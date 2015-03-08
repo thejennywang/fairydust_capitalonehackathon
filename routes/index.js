@@ -83,11 +83,9 @@ module.exports = function (app) {
 
     });
 
-
     app.get('/c1month', function(req, res) {
         capitalone.getTransactionsMonth(function(data){ res.json(data) }) ;
     });
-
 
     app.get('/c1all', function(req, res) {
         capitalone.getTransactionsAll(function(data){ res.json(data) }) ;
