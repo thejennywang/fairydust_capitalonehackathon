@@ -1,10 +1,9 @@
-// var fs = require('fs');
 var restler = require('restler');
-// var request = require('request');
 var crypto = require('crypto');
 var async = require('async');
 var capitalone = require('../services/capitalone-levelmoney/lib/levelmoney');
 var plotly = require('../services/plotly/lib/plotly');
+var nexmo = require('../services/nexmo/lib/nexmo');
 
 module.exports = function (app) {
 
@@ -14,6 +13,13 @@ module.exports = function (app) {
 
     app.get('/', function (req, res) {
           res.render('index');
+    });
+
+    app.post('/user', function(req, res){
+      var number = req.body.number;
+      nexmo.sendSms(number, function(result){
+        res.send(201);
+      });
     });
 
     app.get('/hi', function(req, res) {
