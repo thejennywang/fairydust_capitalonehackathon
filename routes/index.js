@@ -2,7 +2,7 @@
 var restler = require('restler');
 // var request = require('request');
 var crypto = require('crypto');
-
+var capitalone = require('../services/capitalone-levelmoney/lib/levelmoney');
 
 module.exports = function (app) {
 
@@ -17,7 +17,7 @@ module.exports = function (app) {
     app.get('/hi', function(req, res) {
           res.json({ message: 'hooray! welcome to our api!'});
     });
-    
+
     app.get('/goals', function(req, res) {
 
         var goals = [];
@@ -164,6 +164,17 @@ module.exports = function (app) {
         res.json(goals);
 
     });
+
+
+    app.get('/c1month', function(req, res) {
+        capitalone.getTransactionsMonth(function(data){ res.json(data) }) ;
+    });
+
+
+    app.get('/c1all', function(req, res) {
+        capitalone.getTransactionsAll(function(data){ res.json(data) }) ;
+    });
+
 
 };
 
