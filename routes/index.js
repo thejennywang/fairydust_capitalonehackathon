@@ -42,19 +42,19 @@ module.exports = function (app) {
         //GOAL 1
 
         goal1.id = "1";
-        goal1.name = "College";
+        goal1.name = "Tuition";
         goal1.date = "03.07.2015"
-        goal1.targetAmount = "50000000";
+        goal1.targetAmount = "20000000";
         goal1.transactions = transactions1;
-        goal1.spent = "40000000";
-        goal1.saved = "30000000";
+        goal1.spent = "140000000";
+        goal1.saved = "15000000";
         goal1.daysNeeded = "1000";
 
 
         //GOAL 2
 
         goal2.id = "2";
-        goal2.name = "Travel";
+        goal2.name = "Dorm";
         goal2.date = "03.07.2015"
         goal2.targetAmount = "5000000";
         goal2.transactions = transactions2;
@@ -65,7 +65,7 @@ module.exports = function (app) {
         //GOAL 3
 
         goal3.id = "3";
-        goal3.name = "Car";
+        goal3.name = "Books";
         goal3.date = "03.07.2015"
         goal3.targetAmount = "2000000";
         goal3.transactions = transactions3;
