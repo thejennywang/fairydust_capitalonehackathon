@@ -26,25 +26,50 @@ module.exports = function (app) {
         var goal2 = {};
         var goal3 = {};
 
+
+
+        var transactions1 =  [
+        {
+          "transaction-id": "1425679320000",
+          "account-id": "nonce:42069000-96459775",
+          "raw-merchant": "SERVICE FEE",
+          "merchant": "Service Fee",
+          "is-pending": false,
+          "transaction-time": "02.25.15",
+          "amount": 48000,
+          "categorization": "Unknown"
+        },
+        {
+          "transaction-id": "1425452880000",
+          "account-id": "nonce:42069000-96459775",
+          "raw-merchant": "CHECK",
+          "merchant": "Check",
+          "is-pending": false,
+          "transaction-time": "02.25.15",
+          "amount": 13642900,
+          "categorization": "Unknown"
+        },
+        {
+          "transaction-id": "1425442800000",
+          "account-id": "nonce:42069000-96459775",
+          "raw-merchant": "CC PAYMENT",
+          "merchant": "CC Payment",
+          "is-pending": false,
+          "transaction-time": "02.25.15",
+          "amount": 5194500,
+          "categorization": "Unknown"
+        },
+        ];
+
         goal1.id = "1";
         goal1.name = "college";
-        goal1.amount = "$5000";
+        goal1.date = "03.07.2015"
+        goal1.targetAmount = "$5000";
+        goal1.transactions = transactions1;
+        goal1.spent = "$2000";
+        goal1.saved = "$500"
 
-
-        goal2.id = "2";
-        goal2.name = "travel";
-        goal2.amount = "$500";
-
-
-        goal3.id = "3";
-        goal3.name = "car";
-        goal3.amount = "$200";
-
-        goals[0] = goal1;
-        goals[1] = goal2;
-        goals[2] = goal3;
-
-
+       goals[0] = goal1;
 
         res.json(goals);
 
