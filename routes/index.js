@@ -20,7 +20,7 @@ module.exports = function (app) {
           res.json({ message: 'hooray! welcome to our api!'});
     });
 
-    app.get('/goals', function(req, res) {
+    app.get('/goalsdemo', function(req, res) {
 
         var goals = [];
 
@@ -29,41 +29,7 @@ module.exports = function (app) {
         var goal3 = {};
 
 
-        var transactions1 =  [
-            {
-              "transaction-id": "1425679320000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "SERVICE FEE",
-              "merchant": "Service Fee",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 48000,
-              "saved": 480,
-              "categorization": "Unknown"
-            },
-            {
-              "transaction-id": "1425452880000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CHECK",
-              "merchant": "Check",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 13642900,
-              "saved": 136429,
-              "categorization": "Unknown"
-            },
-            {
-              "transaction-id": "1425442800000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CC PAYMENT",
-              "merchant": "CC Payment",
-              "is-pending": false,
-              "transaction-time": "02.25.15",
-              "amount": 5194500,
-              "saved": 51945,
-              "categorization": "Unknown"
-            }
-        ];
+        var transactions1 =  [];
 
         var transactions2 =  [];
 
@@ -111,6 +77,9 @@ module.exports = function (app) {
 
     });
 
+    app.get('/goals', function(req, res) {
+        capitalone.getTransactionsNew(function(data){ res.json(data) }) ;
+    });
 
     app.get('/c1month', function(req, res) {
         capitalone.getTransactionsMonth(function(data){ res.json(data) }) ;
