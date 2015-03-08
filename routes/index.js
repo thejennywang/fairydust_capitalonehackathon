@@ -36,6 +36,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "02.25.15",
               "amount": 48000,
+              "saved": 480,
               "categorization": "Unknown"
             },
             {
@@ -46,6 +47,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "02.25.15",
               "amount": 13642900,
+              "saved": 136429,
               "categorization": "Unknown"
             },
             {
@@ -56,6 +58,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "02.25.15",
               "amount": 5194500,
+              "saved": 51945,
               "categorization": "Unknown"
             }
         ];
@@ -69,6 +72,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "02.28.15",
               "amount": 820000,
+              "saved": 8200,
               "categorization": "Unknown"
             },
             {
@@ -79,6 +83,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "03.01.15",
               "amount": 737757,
+              "saved": 7377,
               "categorization": "Gas & Fuel"
             },
             {
@@ -89,6 +94,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "03.01.15",
               "amount": 23379709,
+              "saved": 233797,
               "categorization": "Check"
             }
         ];
@@ -102,6 +108,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "02.18.15",
               "amount": 820000,
+              "saved": 8200,
               "categorization": "Unknown"
             },
             {
@@ -112,6 +119,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "03.01.15",
               "amount": 737757,
+              "saved": 7377,
               "categorization": "Gas & Fuel"
             },
             {
@@ -122,6 +130,7 @@ module.exports = function (app) {
               "is-pending": false,
               "transaction-time": "03.01.15",
               "amount": 23379709,
+              "saved": 233797,
               "categorization": "Check"
             }
         ];
