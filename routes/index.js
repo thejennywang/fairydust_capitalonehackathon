@@ -63,77 +63,9 @@ module.exports = function (app) {
             }
         ];
 
-        var transactions2 =  [
-            {
-              "transaction-id": "1425274080000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "ATM WITHDRAWAL",
-              "merchant": "ATM Withdrawal",
-              "is-pending": false,
-              "transaction-time": "02.28.15",
-              "amount": 820000,
-              "saved": 8200,
-              "categorization": "Unknown"
-            },
-            {
-              "transaction-id": "1425254340000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "FUEL CITY",
-              "merchant": "Fuel City",
-              "is-pending": false,
-              "transaction-time": "03.01.15",
-              "amount": 737757,
-              "saved": 7377,
-              "categorization": "Gas & Fuel"
-            },
-            {
-              "transaction-id": "1425218520000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CHECK 1111",
-              "merchant": "Check 1111",
-              "is-pending": false,
-              "transaction-time": "03.01.15",
-              "amount": 23379709,
-              "saved": 233797,
-              "categorization": "Check"
-            }
-        ];
+        var transactions2 =  [];
 
-        var transactions3 =  [
-            {
-              "transaction-id": "1425274080000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "ATM WITHDRAWAL",
-              "merchant": "ATM Withdrawal",
-              "is-pending": false,
-              "transaction-time": "02.18.15",
-              "amount": 820000,
-              "saved": 8200,
-              "categorization": "Unknown"
-            },
-            {
-              "transaction-id": "1425254340000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "FUEL CITY",
-              "merchant": "Fuel City",
-              "is-pending": false,
-              "transaction-time": "03.01.15",
-              "amount": 737757,
-              "saved": 7377,
-              "categorization": "Gas & Fuel"
-            },
-            {
-              "transaction-id": "1425218520000",
-              "account-id": "nonce:42069000-96459775",
-              "raw-merchant": "CHECK 1111",
-              "merchant": "Check 1111",
-              "is-pending": false,
-              "transaction-time": "03.01.15",
-              "amount": 23379709,
-              "saved": 233797,
-              "categorization": "Check"
-            }
-        ];
+        var transactions3 =  [];
 
         //GOAL 1
 
@@ -144,6 +76,7 @@ module.exports = function (app) {
         goal1.transactions = transactions1;
         goal1.spent = "20000000";
         goal1.saved = "5000000";
+        goal1.daysNeeded = "1000";
 
 
         //GOAL 2
@@ -155,6 +88,7 @@ module.exports = function (app) {
         goal2.transactions = transactions2;
         goal2.spent = "0000";
         goal2.saved = "0000";
+        goal2.daysNeeded = "400";
 
         //GOAL 3
 
@@ -165,6 +99,7 @@ module.exports = function (app) {
         goal3.transactions = transactions3;
         goal3.spent = "0000";
         goal3.saved = "0000";
+        goal3.daysNeeded = "300";
 
         goals[0] = goal1;
         goals[1] = goal2;
